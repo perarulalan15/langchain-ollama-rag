@@ -9,10 +9,9 @@ from langchain_core.output_parsers import StrOutputParser
 load_dotenv()
 
 ## Langsmith Tracking
-os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
+os.environ["LANGCHAIN_API_KEY"]=st.secrets["LANGCHAIN_API_KEY"]
 os.environ["LANGCHAIN_TRACING_V2"]="true"
-os.environ["LANGCHAIN_PROJECT_NAME"]=os.getenv("LANGCHAIN_PROJECT_NAME")
-
+os.environ["LANGCHAIN_PROJECT_NAME"]=st.secrets.get("LANGCHAIN_PROJECT_NAME", "Langchain Demo With llama3.2 Model")
 ## Prompt Template
 prompt=ChatPromptTemplate.from_messages(
     [
