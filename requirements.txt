@@ -1,0 +1,7 @@
+python-dotenv
+ipykernel
+streamlit
+langchain-ollama
+bs4
+langchain-community
+langchain-text-splitters
